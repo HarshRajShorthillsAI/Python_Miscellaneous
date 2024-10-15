@@ -1,0 +1,82 @@
+(venv) shtlp_0147@SHTLP0147:~/python_miscellaneous/Unit test with pytest$ pytest -v test_demo.py
+========================================== test session starts ==========================================
+platform linux -- Python 3.10.12, pytest-8.3.3, pluggy-1.5.0 -- /home/shtlp_0147/python_miscellaneous/venv/bin/python
+cachedir: .pytest_cache
+rootdir: /home/shtlp_0147/python_miscellaneous/Unit test with pytest
+collected 4 items                                                                                       
+
+test_demo.py::TestDemo::test_add PASSED                                                           [ 25%]
+test_demo.py::TestDemo::test_subtract PASSED                                                      [ 50%]
+test_demo.py::TestDemo::test_multiply PASSED                                                      [ 75%]
+test_demo.py::TestDemo::test_divide PASSED                                                        [100%]
+
+=========================================== 4 passed in 0.02s ===========================================
+
+(venv) shtlp_0147@SHTLP0147:~/python_miscellaneous/Unit test with pytest$ py.test -v
+========================================== test session starts ==========================================
+platform linux -- Python 3.10.12, pytest-8.3.3, pluggy-1.5.0 -- /home/shtlp_0147/python_miscellaneous/venv/bin/python
+cachedir: .pytest_cache
+rootdir: /home/shtlp_0147/python_miscellaneous/Unit test with pytest
+collected 4 items                                                                                       
+
+test_demo.py::TestDemo::test_add PASSED                                                           [ 25%]
+test_demo.py::TestDemo::test_subtract PASSED                                                      [ 50%]
+test_demo.py::TestDemo::test_multiply PASSED                                                      [ 75%]
+test_demo.py::TestDemo::test_divide PASSED                                                        [100%]
+
+=========================================== 4 passed in 0.01s ===========================================
+
+(venv) shtlp_0147@SHTLP0147:~/python_miscellaneous/Unit test with pytest$ py.test -v
+========================================== test session starts ==========================================
+platform linux -- Python 3.10.12, pytest-8.3.3, pluggy-1.5.0 -- /home/shtlp_0147/python_miscellaneous/venv/bin/python
+cachedir: .pytest_cache
+rootdir: /home/shtlp_0147/python_miscellaneous/Unit test with pytest
+collected 6 items                                                                                       
+
+test_demo.py::TestDemo::test_add PASSED                                                           [ 16%]
+test_demo.py::TestDemo::test_subtract PASSED                                                      [ 33%]
+test_demo.py::TestDemo::test_multiply PASSED                                                      [ 50%]
+test_demo.py::TestDemo::test_divide PASSED                                                        [ 66%]
+test_demo.py::TestDemo::test_consonents PASSED                                                    [ 83%]
+test_demo.py::TestDemo::test_vowels PASSED                                                        [100%]
+
+=========================================== 6 passed in 0.01s ===========================================
+
+(venv) shtlp_0147@SHTLP0147:~/python_miscellaneous/Unit test with pytest$ pytest test_demo.py::TestDemo::test_vowels -v
+========================================== test session starts ==========================================
+platform linux -- Python 3.10.12, pytest-8.3.3, pluggy-1.5.0 -- /home/shtlp_0147/python_miscellaneous/venv/bin/python
+cachedir: .pytest_cache
+rootdir: /home/shtlp_0147/python_miscellaneous/Unit test with pytest
+collected 1 item                                                                                        
+
+test_demo.py::TestDemo::test_vowels PASSED                                                        [100%]
+
+=========================================== 1 passed in 0.00s ===========================================
+
+(venv) shtlp_0147@SHTLP0147:~/python_miscellaneous/Unit test with pytest$ pytest -v -k "not vowel and not
+ consonent"
+========================================== test session starts ==========================================
+platform linux -- Python 3.10.12, pytest-8.3.3, pluggy-1.5.0 -- /home/shtlp_0147/python_miscellaneous/venv/bin/python
+cachedir: .pytest_cache
+rootdir: /home/shtlp_0147/python_miscellaneous/Unit test with pytest
+collected 6 items / 2 deselected / 4 selected                                                           
+
+test_demo.py::TestDemo::test_add PASSED                                                           [ 25%]
+test_demo.py::TestDemo::test_subtract PASSED                                                      [ 50%]
+test_demo.py::TestDemo::test_multiply PASSED                                                      [ 75%]
+test_demo.py::TestDemo::test_divide PASSED                                                        [100%]
+
+==================================== 4 passed, 2 deselected in 0.01s ====================================
+
+(venv) shtlp_0147@SHTLP0147:~/python_miscellaneous/Unit test with pytest$ pytest -v -k "vowel or consonen
+t"
+========================================== test session starts ==========================================
+platform linux -- Python 3.10.12, pytest-8.3.3, pluggy-1.5.0 -- /home/shtlp_0147/python_miscellaneous/venv/bin/python
+cachedir: .pytest_cache
+rootdir: /home/shtlp_0147/python_miscellaneous/Unit test with pytest
+collected 6 items / 4 deselected / 2 selected                                                           
+
+test_demo.py::TestDemo::test_consonents PASSED                                                    [ 50%]
+test_demo.py::TestDemo::test_vowels PASSED                                                        [100%]
+
+==================================== 2 passed, 4 deselected in 0.01s ====================================

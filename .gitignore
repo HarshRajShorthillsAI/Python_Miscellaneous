@@ -1,0 +1,4 @@
+.venv/
+venv/
+Unit\ test\ with\ pytest/__pycache__/
+Unit\ test\ with\ pytest/.pytest_cache/

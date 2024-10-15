@@ -1,0 +1,3 @@
+2024-10-14 14:49:49 Started background process with PID: 270160
+2024-10-14 14:49:52 Killing the process with PID: 270160
+2024-10-14 14:49:52 Process with PID 270160 has been killed.
