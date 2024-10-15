@@ -12,7 +12,7 @@ class TestDemo:
         assert self.arithmetic.add(-3,2) == -1
         assert self.arithmetic.add(3,-2) == 1
         assert self.arithmetic.add(-3,-2) == -5
-        # print("add")
+        print("add")
 
     @pytest.mark.number
     def test_subtract(self):

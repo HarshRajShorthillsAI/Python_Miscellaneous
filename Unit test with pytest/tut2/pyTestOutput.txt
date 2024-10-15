@@ -290,3 +290,5 @@ test_demo.py::TestDemo::test_greet SKIPPED (<skipif> Now is past noon)
 (venv) shtlp_0147@SHTLP0147:~/python_miscellaneous/Unit test with pytest$ pytest -q
 ....s..s                                                                                          [100%]
 6 passed, 2 skipped in 0.02s
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx END OF TUTORIAL 2 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
