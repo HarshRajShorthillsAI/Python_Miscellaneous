@@ -17,3 +17,6 @@ class DemoClass:
     
     def vowel(self, x: str):
         return x in ('a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U')
+    
+    def greet(self):
+        print("Good Morning and Welcome!")

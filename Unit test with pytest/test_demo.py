@@ -1,5 +1,6 @@
 import pytest
 from demoCode import DemoClass
+from datetime import datetime
 
 class TestDemo:
     def setup_method(self):
@@ -11,6 +12,7 @@ class TestDemo:
         assert self.arithmetic.add(-3,2) == -1
         assert self.arithmetic.add(3,-2) == 1
         assert self.arithmetic.add(-3,-2) == -5
+        # print("add")
 
     @pytest.mark.number
     def test_subtract(self):
@@ -34,6 +36,10 @@ class TestDemo:
         assert self.arithmetic.divide(-3,-2) == 1.5
         assert self.arithmetic.divide(4,2) == 2
 
+    @pytest.mark.skip(reason="Throws Divide by zero error")
+    def test_divide_by_zero(self):
+        assert self.arithmetic.divide(1/0)
+
     @pytest.mark.alphabet
     def test_consonents(self):
         for i in range(65, 91):
@@ -54,5 +60,7 @@ class TestDemo:
             t = chr(i)
             assert self.arithmetic.vowel(t) == (t in ['a', 'e', 'i', 'o', 'u'])
 
-    # def test_divide_by_zero(self):
-    #     assert self.arithmetic.divide(1/0)
+    @pytest.mark.skipif(reason="<skipif> Now is past noon")
+    def test_greet(self):
+        time = datetime.now().hour
+        assert time < 12 and self.arithmetic.greet()
